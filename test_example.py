@@ -16,3 +16,12 @@ def test_addition():
 
 def test_subtraction():
     assert 5 - 3 == 2
+
+# Pickup environment variables and log them
+import os
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.info('Environment variables:')
+for key, value in os.environ.items():
+    logger.info(f'{key}={value}')
